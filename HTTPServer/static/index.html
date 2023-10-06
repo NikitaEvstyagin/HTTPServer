@@ -154,18 +154,18 @@
         </div>
         <div class="questionnaire">
         <h2>Заполните анкету</h2>
-            <form>
+            <form method="POST" action="/send-email">
                 <div class="questionnaire-div">
                     <div class="left">
-                        <input class="city" type="text" list="cities" placeholder="Город">
+                        <input class="city" name = "city" type="text" list="cities" placeholder="Город">
                             <datalist id="cities">
                                 <option>Казань</option>
                             </datalist>
-                            <input class="region" type="text" list="regions" placeholder="Адрес">
+                            <input class="region" name = "region" type="text" list="regions" placeholder="Адрес">
                             <datalist id="regions">
                                 <option>Приволжский район</option>
                             </datalist>
-                        <select class="profession">
+                        <select class="profession" name = "profession">
                             <optgroup>
                                 <option>Профессия</option>
                                 <option>Повар</option>
@@ -178,14 +178,14 @@
                         <button class="form-button" type="submit">Отправить</button>
                     </div>
                     <div class="right">
-                        <input class="name" type="text" placeholder="Имя">
-                        <input class="lastname" type="text" placeholder="Фамилия">
+                        <input class="name" name="name" type="text" placeholder="Имя">
+                        <input class="lastname" name="lastname"  type="text" placeholder="Фамилия">
                         <div class="row">
                             <div class="date">
-                                <input class="date" type="text" id="numberInput" placeholder="День рождения" pattern="\d{1,3}(?:\.\d{3})*(?:,\d+)?" title="День рождения">
+                                <input class="date" name="date" type="text" id="numberInput" placeholder="День рождения" pattern="\d{1,3}(?:\.\d{3})*(?:,\d+)?" title="День рождения">
                             </div>
                             <div class="number">
-                                <input class="number" type="number" placeholder="Телефон">
+                                <input class="number"  name="number" type="number" placeholder="Телефон">
                             </div>
                         </div>
                         <input class="url" type="url" placeholder="Ссылка на соцсети">

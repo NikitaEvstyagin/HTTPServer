@@ -17,7 +17,7 @@ namespace HTTPServer.Hadlers
                 // завершение выполнения запроса;
             }
             // передача запроса дальше по цепи при наличии в ней обработчиков
-            else if (Successor != null)
+            else if (condition != null)
             {
                 Successor.HandleRequest(condition);
             }

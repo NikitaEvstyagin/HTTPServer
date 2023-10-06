@@ -50,7 +50,6 @@ namespace HTTPServer.Servises.EmailServer
                      $"Профессия: {profession.Split("=")[1]}\n" +
                      $"День рождения: {birthday.Split("=")[1]}\n" +
                      $"Номер телефона: {phone.Split("=")[1]}\n";
-            m.Attachments.Add(new Attachment("../../../1.rar"));
             var smtp = new SmtpClient(SmtpServerHost, SmtpServerPort);
             smtp.Credentials = new NetworkCredential(MailSender, PasswordSender);
             smtp.EnableSsl = true;
