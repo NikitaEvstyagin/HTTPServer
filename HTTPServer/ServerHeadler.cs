@@ -26,7 +26,7 @@ public class ServerHandler
         _httpListener.Prefixes.Add($"http://{_appSettings.Configuration!.Address}:{_appSettings.Configuration.Port}/");
         staticFolder = _currentDirectory + _appSettings.Configuration.StaticFilesPath;
         _notFoundHtml = _currentDirectory + "notFound.html";
-        var email = new EmailSenderService("nevstyagin@yandex.ru", "yiiahfcmktibxrux", "evstyagin09@gmail.com", "smtp.yandex.ru", 465);
+        var email = new EmailSenderService("nevstyagin@yandex.ru", "******", "evstyagin09@gmail.com", "smtp.yandex.ru", 465);
 
         try
         {
