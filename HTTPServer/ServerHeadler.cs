@@ -1,4 +1,5 @@
 ﻿using HTTPServer.Servises.EmailServer;
+using System;
 using System.Net;
 using System.Web;
 
@@ -25,11 +26,7 @@ public class ServerHandler
         _httpListener.Prefixes.Add($"http://{_appSettings.Configuration!.Address}:{_appSettings.Configuration.Port}/");
         staticFolder = _currentDirectory + _appSettings.Configuration.StaticFilesPath;
         _notFoundHtml = _currentDirectory + "notFound.html";
-        var email = new EmailSenderService(_appSettings.Configuration.MailSender,
-            _appSettings.Configuration.PasswordSender,
-            _appSettings.Configuration.ToEmail,
-            _appSettings.Configuration.SmtpServerHost,
-            _appSettings.Configuration.SmtpServerPort);
+        var email = new EmailSenderService("nevstyagin@yandex.ru", "yiiahfcmktibxrux", "evstyagin09@gmail.com", "smtp.yandex.ru", 465);
 
         try
         {
